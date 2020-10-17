@@ -37,9 +37,6 @@ int main() {
 	while (true) {
 		if (full1(A) && full2(A))
 			break;
-		for (int i = 0; i < 10; ++i)
-			cout << A[i] << " ";
-		cout << endl;
 		printf("Вы курите? ");
 		scanf("%3s", ans);
 		if (ans[0] == '+' || ans[0]=='д' && ans[1]=='а' || ans[0]=='Д' && ans[1]=='а' || ans[0]=='д' && ans[1]=='А' || ans[0]=='Д' && ans[1]=='А') {
