@@ -13,23 +13,26 @@ int main() {
 	/*                  Filling in array                       */
 	for (int i = 0; i < n; ++i)
 		A[i] = rand() % 100 - 50;
-
+	/*                  Ouputting array                        */
+	printf("Array: ");
 	for (int i = 0; i < n; ++i)
-		cout << A[i] << " ";
-	cout << endl;
+		printf("%d ", A[i]);
+	printf("\n");
+	/*                   Counting succession                   */
 	for (int i = 0; i < n; ++i) {
 		if (A[i] > 0 && A[i + 1] < 0 || A[i] < 0 && A[i + 1]>0) {
 			if (!outputed) {
-				cout << i;
+				printf("%d\n", i);
 				outputed = true;
 			}
 			check = true;
 		}
 		else {
 			if (check) {
-				cout << i << endl;
 				check = false;
 			}
+			if (outputed)
+				outputed = false;
 		}
 	}
 }
