@@ -2,14 +2,31 @@
 #include<stdio.h>
 #include<ctime>
 #include<iostream>
-int n, A[20];
+int n, A[20], sum;
 int main() {
+
+	/*
+	// Getting random number
 	srand(time(0));
 	n = rand() % 1000 + 1;
-	int counter = 0;
+	*/
+	scanf("%d", &n);
+	int k = 0;
+
+	// Counting sum
 	while (n > 0) {
-		A[k] = n % 10;
+		sum += n % 10;
 		n /= 10;
 	}
-	for(int i)
+
+	// Filling in array with numbers from sum
+	while (sum > 0) {
+		A[k] = sum % 10;
+		sum /= 10;
+		k++;
+	}
+
+	//Ouputting reversed sum
+	for (int i = 0; i < k; ++i)
+		printf("%d", A[i]);
 }

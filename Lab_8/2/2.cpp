@@ -26,6 +26,7 @@ int main() {
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
 	char ans[3];
+
 	// Filling in array
 	srand(time(0));
 	for (int i = 0; i < 10; ++i) {
