@@ -7,7 +7,9 @@
 #include<ctype.h>
 using namespace std;
 
-// Realizing functions to check is part full or not
+bool A[10];
+int n = 10, temp = 0,num;
+
 bool full1(bool z[]) {
 	for (int i = 0; i < 5; ++i)
 		if (z[i] == 0)return false;
@@ -19,70 +21,79 @@ bool full2(bool z[]) {
 		if (z[i] == 0)return false;
 	return true;
 }
-bool A[10];
-int n = 10, temp = 0;
+
 int main() {
-	// Initialization of Cirillic Alphabet
 	SetConsoleOutputCP(1251);
 	SetConsoleCP(1251);
-
-	// Randomize
+	char ans[3];
+	// Filling in array
 	srand(time(0));
-	char ans[5];
-
-	//Filling in array
 	for (int i = 0; i < 10; ++i) {
-		if ((rand() % 10 + 1) % 2 == 0)
-			A[i] = 0;
-		else
-			A[i] = 1;
+		if ((rand() % 10 + 1) % 2 == 0)A[i] = 0;
+		else A[i] = 1;
 	}
 
 	// Main part
 	while (true) {
 		if (full1(A) && full2(A))
 			break;
-		printf("Список мест: ");
 		for (int i = 0; i < 10; ++i)
 			cout << A[i] << " ";
 		cout << endl;
 		printf("Вы курите? ");
 		scanf("%3s", ans);
-		if (ans[0] == 'д' && ans[1] == 'а' || ans[0] == 'Д' && ans[1] == 'а' || ans[0] == '1') {
-			temp = rand() % 5 + 1;
-			if (!A[temp - 1]) {
-				printf("Место было забронировано. Номер Вашего места: %d\n", temp);
-				A[temp - 1] = 1;
+		if (ans[0] == '+' || ans[0]=='д' && ans[1]=='а' || ans[0]=='Д' && ans[1]=='а' || ans[0]=='д' && ans[1]=='А' || ans[0]=='Д' && ans[1]=='А') {
+			temp = rand() % 4;
+
+			// If place is empty
+			if (!A[temp]) {
+				A[temp] = 1;
+				printf("Место номер %d было забронировано\n", temp + 1);
 			}
+
+			// If place isn't empty
 			else {
-				if (!full1) { // Checking free places in 1-st part
-					for (int i = 0; i < 5; ++i)
-						if (A[i] == 0) {
+				
+				// Checking is one more free place
+				if (full1(A))
+					printf("Свободных мест в этой части нет\n");
+
+				// Finding free place
+				else {
+					for(int i=0;i<5;++i)
+						if (!A[i]) {
+							printf("Место номер %d было забронировано\n", i + 1);
 							A[i] = 1;
-							printf("Место было забронировано. Номер Вашего места: %d\n", i + 1);
+							break;
 						}
 				}
-				else
-					printf("Мест в данной секции нет");
 			}
 		}
-		else if (ans[0] == 'н' && ans[1] == 'е' && ans[2] == 'т' || ans[0] == 'Н' && ans[1] == 'е' && ans[2] == 'т' || ans[0] == '0') {
-			temp = rand() % 5 + 5 + 1;
-			if (!A[temp - 1]) {
-				printf("Место было забронировано. Номер Вашего места: %d\n", temp);
-				A[temp - 1] = 1;
+		else {
+			temp = rand() % 4 + 5;
+
+			// If place if empty
+			if (!A[temp]) {
+				A[temp] = 1;
+				printf("Место номер %d было забронировано\n", temp + 1);
 			}
+
+			// If place isn't empty
 			else {
-				if (!full2) {
+
+				// Checking is one more free place
+				if(full2(A))
+					printf("Свободных мест в этой части нет\n");
+
+				// Finding free place
+				else {
 					for (int i = 5; i < 10; ++i)
-						if (A[i] == 0) {
+						if (!A[i]) {
+							printf("Место номер %d было забронировано\n", i + 1);
 							A[i] = 1;
-							temp = i + 1;
-							printf("Место было забронировано. Номер Вашего места: %d\n", temp);
+							break;
 						}
 				}
-				else
-					printf("Мест в данной секции нет\n");
 			}
 		}
 	}
