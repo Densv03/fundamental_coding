@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<ctime>
 #include<iostream>
-int n, A[20], sum;
+int n, A[20], sum,num;
 int main() {
 
 	/*
@@ -17,7 +17,10 @@ int main() {
 	while (n > 0) {
 		sum += n % 10;
 		n /= 10;
+		num++;
 	}
+
+	// num - number of dights in number n
 
 	// Filling in array with numbers from sum
 	while (sum > 0) {
