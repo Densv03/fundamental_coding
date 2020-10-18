@@ -43,13 +43,16 @@ int main() {
 		// Place for elements
 		printf("В какое место хотите вставить элементы? ");
 		scanf("%d", &pos);
-
+		while (pos > n) {
+			printf("Введены некорректные данные. Попробуйте ещё раз: ");
+			scanf("%d", &pos);
+		}
 		for (int i = 0; i < pos; ++i)
 			C[i] = A[i].first;
-		for (int i = pos; i < pos + k; ++i)
+		for (int i = pos; i < pos + k+1; ++i)
 			C[i] = B[i - pos];
 		for (int i = pos + k; i < n + k; ++i)
-			C[i] = A[i - pos].first;
+			C[i] = A[i - pos-1].first;
 		for (int i = 0; i < n + k; ++i)
 			cout << C[i] << " ";
 	}
