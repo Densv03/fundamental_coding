@@ -47,24 +47,34 @@ int main() {
 			printf("Введены некорректные данные. Попробуйте ещё раз: ");
 			scanf("%d", &pos);
 		}
+
+		// Division part with adding to three parts
+		// Creating new array is:
+		// 1. Adding part original array to variable pos
+		// 2. Adding array B to new array
+		// 3. Adding residue of elements to new array
 		pos--;
-		// pos
-		// n
-		// k
 		int temp = 0, temp1 = 0;
+
+		// 1.
 		for (int i = 0; i < pos; ++i) {
 			C[i] = A[temp1].first;
 			temp1++;
 		}
-		// pos k n
+
+		// 2.
 		for (int i = pos; i < pos + k; ++i) {
 			C[i] = B[temp];
 			temp++;
 		}
+
+		// 3.
 		for (int i = pos + k; i < k + n; ++i) {
 			C[i] = A[temp1].first;
 			temp1++;
 		}
+
+		// Outputting
 		for (int i = 0; i < n + k; ++i)
 			printf("%d ", C[i]);
 	}
@@ -99,7 +109,7 @@ int main() {
 			}
 		}
 
-		//Outputting array
+		//Outputting
 		for (int i = 0; i < t; ++i)
 			printf("%d ", B[i]);
 	}
