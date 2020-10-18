@@ -47,14 +47,26 @@ int main() {
 			printf("Введены некорректные данные. Попробуйте ещё раз: ");
 			scanf("%d", &pos);
 		}
-		for (int i = 0; i < pos; ++i)
-			C[i] = A[i].first;
-		for (int i = pos; i < pos + k+1; ++i)
-			C[i] = B[i - pos];
-		for (int i = pos + k; i < n + k; ++i)
-			C[i] = A[i - pos-1].first;
+		pos--;
+		// pos
+		// n
+		// k
+		int temp = 0, temp1 = 0;
+		for (int i = 0; i < pos; ++i) {
+			C[i] = A[temp1].first;
+			temp1++;
+		}
+		// pos k n
+		for (int i = pos; i < pos + k; ++i) {
+			C[i] = B[temp];
+			temp++;
+		}
+		for (int i = pos + k; i < k + n; ++i) {
+			C[i] = A[temp1].first;
+			temp1++;
+		}
 		for (int i = 0; i < n + k; ++i)
-			cout << C[i] << " ";
+			printf("%d ", C[i]);
 	}
 
 	// Checking action
