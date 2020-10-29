@@ -11,15 +11,14 @@ int main() {
 	x = rand() % 10 + 1;   //
 	// t1: a>0 || x>0
 	//printf("Enter x for t1: "); --
-	//scanf("%f", &x);
+	//scanf("%f", &x); --
 	t1 = (1 / (6 * a)) * log((a * a - a * x + x * x) / (a * a + 2 * a * x + x * x)) + (1 / (a * sqrt(3)));
 	//printf("Enter x for t2: "); --
-	//scanf("%f", &y);
+	//scanf("%f", &y); --
 	a = rand() % 10 + 1;
 	b = rand() % 10;
 	c = rand() % 10 + 1;
 	y = rand() % 10;   //
-	//printf("%f %f %f %f\n", a, b, c, y);
 	float ll=0;
 	while (true) {
 		if (ll>0)
