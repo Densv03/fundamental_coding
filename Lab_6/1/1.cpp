@@ -3,8 +3,9 @@
 #include<cmath>
 int main() {
 	float n /*= 10*/, sum = 0;
+	printf("Enter number: ");
 	scanf("%f", &n);
-	for (int i = 1; i <= ; ++i) {
+	for (int i = 1; i <= n; ++i) {
 		sum += ((pow(-1, n)) * ((n + 1) / (n * n + 1)));
 		//printf("%f\n", sum);
 	}
