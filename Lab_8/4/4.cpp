@@ -5,13 +5,15 @@
 int n, A[20], sum,num;
 int main() {
 
-	/*
+	
 	// Getting random number
 	srand(time(0));
 	n = rand() % 1000 + 1;
-	*/
-	scanf("%d", &n);
+	
+	//scanf("%d", &n);
 	int k = 0;
+
+	printf("n = %d\n", n);
 
 	// Counting sum
 	while (n > 0) {

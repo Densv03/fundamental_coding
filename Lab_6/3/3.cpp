@@ -9,10 +9,10 @@ int main() {
 		num1 = rand() % 9 + 1;
 		num2 = rand() % 9 + 1;
 		printf("%d * %d = ", num1, num2);
-		scanf("%d", &k);
-		/*
-		checker = rand() % 10;
-		if (checker % 2 == 0) {
+		//scanf("%d", &k);
+		
+		checker = rand() % 10 + 1;
+		if (checker <= 8) {
 			k = num1 * num2;
 			printf("%d\n", k);
 		}
@@ -20,7 +20,7 @@ int main() {
 			k = rand() % 90 + 1;
 			printf("%d\n",k);
 		}
-		*/
+		
 		if (num1 * num2 != k)mistakes++;
 	}
 	if (mistakes > 4)mark = 1;

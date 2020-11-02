@@ -28,11 +28,11 @@ int main() {
 	char ans[3];
 
 	// Filling in array
-	srand(time(0));
+	/*srand(time(0));
 	for (int i = 0; i < 10; ++i) {
 		if ((rand() % 10 + 1) % 2 == 0)A[i] = 0;
 		else A[i] = 1;
-	}
+	}*/
 
 	// Main part
 	while (true) {
