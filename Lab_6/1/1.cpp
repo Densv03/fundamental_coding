@@ -16,8 +16,8 @@ int main(void) {
             else
                 break;
         if (n == 9)
-            printf("Сумма 10 членов ряда = %10.7lf\n", sum);
+            printf("Sum of 10 succession elements - %10.7lf\n", sum);
     }
-    printf("Полная сумма ряда = %10.7lf\n", sum);
+    printf("Full sum of succession - %10.7lf\n", sum);
     return 0;
 }
