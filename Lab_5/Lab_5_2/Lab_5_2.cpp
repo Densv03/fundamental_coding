@@ -3,12 +3,15 @@
 #include<cmath>
 int main() {
 	float a, b, c, desc, x1, x2;
-	printf("Enter a: ");
+	/*printf("enter a: ");
 	scanf("%f", &a);
-	printf("Enter b: ");
+	printf("enter b: ");
 	scanf("%f", &b);
-	printf("Enter c: ");
-	scanf("%f", &c);
+	printf("enter c: ");
+	scanf("%f", &c);*/
+	a = 1;
+	b = 1;
+	c = -2;
 	desc = (b * b) - (4 * a * c);
 	if (desc >= 0) {
 		x1 = (-b + sqrt(desc)) / 2 * a;
