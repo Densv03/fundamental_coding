@@ -22,7 +22,7 @@ int main() {
 	for (int i = 0; i < n; ++i) {
 		if (A[i] > 0 && A[i + 1] < 0 || A[i] < 0 && A[i + 1]>0) {
 			if (!outputed) {
-				printf("%d\n", i);
+				printf("Start element of succession - %d\nElement number in succession - %d\n", A[i + 1], i + 1);
 				outputed = true;
 			}
 			check = true;

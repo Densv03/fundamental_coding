@@ -22,7 +22,8 @@ int main() {
 		num++;
 	}
 
-	// num - number of dights in number n
+	// outputting amoont of dights
+	printf("Number of dights  = %d\n", num);
 
 	// Filling in array with numbers from sum
 	while (sum > 0) {
@@ -31,7 +32,8 @@ int main() {
 		k++;
 	}
 
-	//Ouputting reversed sum
+	// outputting reversed sum of digits
+	printf("Reversed sum of digits = ");
 	for (int i = 0; i < k; ++i)
 		printf("%d", A[i]);
 }
