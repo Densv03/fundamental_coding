@@ -30,15 +30,15 @@ int main() {
 		n /= 10;
 		num++;
 	}
-	printf("Cycle 1 completed\n");
 	n = n1, num1 = num;
+	// Reverse number
 	while (n > 0) {
 		answer += (n % 10) * difers(num1);
 		n /= 10;
-		num--;
+		num1--;
 	}
-	// outputting amoont of dights
-	printf("%d\n", answer);
-	printf("Number of dights  = %d\n", num);
+	// data outputting
+	printf("Reversed number = %d\n", answer);
+	printf("Number of dights = %d\n", num);
 
 }
