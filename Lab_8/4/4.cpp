@@ -18,8 +18,8 @@ int main() {
 	// Getting random number
 	srand(time(0));
 	n = rand() % 1000 + 1;
+	scanf("%d", &n);
 	n1 = n;
-	//scanf("%d", &n);
 	int k = 0;
 
 	printf("n = %d\n", n);
