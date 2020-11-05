@@ -2,14 +2,23 @@
 #include<stdio.h>
 #include<ctime>
 #include<iostream>
-int n, A[20], sum,num;
+int n, n1, A[20], sum, num, answer,num1;
+int difers(int z) {
+	int k = 1;
+	z--;
+	while (z > 0) {
+		k *= 10;
+		z--;
+	}
+	return k;
+}
 int main() {
 
 	
 	// Getting random number
 	srand(time(0));
 	n = rand() % 1000 + 1;
-	
+	n1 = n;
 	//scanf("%d", &n);
 	int k = 0;
 
@@ -21,19 +30,15 @@ int main() {
 		n /= 10;
 		num++;
 	}
-
+	printf("Cycle 1 completed\n");
+	n = n1, num1 = num;
+	while (n > 0) {
+		answer += (n % 10) * difers(num1);
+		n /= 10;
+		num--;
+	}
 	// outputting amoont of dights
+	printf("%d\n", answer);
 	printf("Number of dights  = %d\n", num);
 
-	// Filling in array with numbers from sum
-	while (sum > 0) {
-		A[k] = sum % 10;
-		sum /= 10;
-		k++;
-	}
-
-	// outputting reversed sum of digits
-	printf("Reversed sum of digits = ");
-	for (int i = 0; i < k; ++i)
-		printf("%d", A[i]);
 }
