@@ -12,22 +12,22 @@ int main() {
 		scanf("%d", &checker);
 	}
 	if (checker == 1) {
-		printf("Enter first matrix size (all sizes must be less than 30)\nEnter m: ");
+		printf("Enter first matrix size (all sizes must be less than 30)\nEnter height: ");
 		scanf("%d", &m);
-		printf("Enter n: ");
+		printf("Enter width: ");
 		scanf("%d", &n);
-		printf("Enter second matrix size (all sizes must be less than 30)\nEnter o: ");
+		printf("Enter second matrix size (all sizes must be less than 30)\nEnter height: ");
 		scanf("%d", &o);
-		printf("\nEnter p: ");
+		printf("\nEnter width: ");
 		scanf("%d", &p);
 		while (n != o || m > 30 || n > 30 || o > 30 || p > 30) {
-			printf("You entered incorrect sizes. Try again\nEnter first matrix size (all sizes must be less than 30) \nEnter m: ");
+			printf("You entered incorrect sizes. Try again\nEnter first matrix size (all sizes must be less than 30) \nEnter height: ");
 			scanf("%d", &m);
-			printf("Enter n: ");
+			printf("Enter width: ");
 			scanf("%d", &n);
-			printf("Enter second matrix size (all sizes must be less than 30)\nEnter o: ");
+			printf("Enter second matrix size (all sizes must be less than 30)\nEnter height: ");
 			scanf("%d", &o);
-			printf("Enter p: ");
+			printf("Enter width: ");
 			scanf("%d", &p);
 		}
 		printf("Enter first array elements: ");
@@ -48,10 +48,10 @@ int main() {
 		printf("Generates matrix sizes are:\nm = %d\nn = %d\no = %d\np = %d\n", m, n, o, p);
 		for (int i = 0; i < m; i++)
 			for (int j = 0; j < n; j++)
-				A[i][j] = rand() % 10 + 1;
+				A[i][j] = rand() % 2 + 1;
 		for (int i = 0; i < o; i++)
 			for (int j = 0; j < p; ++j)
-				B[i][j] = rand() % 10 + 1;
+				B[i][j] = rand() % 2 + 1;
 		printf("First matrix that we have:\n");
 		for (int i = 0; i < m; ++i) {
 			for (int j = 0; j < n; ++j)
