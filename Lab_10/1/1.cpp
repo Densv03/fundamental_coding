@@ -3,9 +3,9 @@
 #include<stdio.h>
 #include<ctime>
 using namespace std;
-float B[15][15],C[100],ans[100];
+float B[15][15],C[100],*ans;
 int A[100];
-float func(int z[], int x, int y) {
+float *func(int *z, int x, int y) {
 	int k = 0, t = 0;
 	// Array to matrix
 
@@ -40,10 +40,7 @@ float func(int z[], int x, int y) {
 		}
 	}
 
-	// Array outputting
-
-	/*for (int i = 0; i < x * y; ++i)
-		cout << C[i] << " ";*/
+	// Array returning
 	return C;
 }
 int main() {
@@ -97,7 +94,14 @@ int main() {
 	}
 	// Original array ouputting
 
+	printf("Original array:\n");
 	for (int i = 0; i < n * m; ++i)
 		printf("%d ", A[i]);
-	printf("\n\n\n");
+	printf("\n");
+	// Outputting ans array
+
+	ans = func(A, n, m);
+	printf("Output:\n");
+	for (int i = 0; i < m * n; i++)
+		printf("%f ", ans[i]);
 }
