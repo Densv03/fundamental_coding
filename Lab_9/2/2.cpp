@@ -94,7 +94,7 @@ int main() {
 	}
 	// Outputting array B
 
-	printf("Array B:\n");
+	printf("\nArray B:\n");
 	for (int i = 0; i < n; ++i) {
 		for (int j = 0; j < m; ++j)
 			printf("%d ", B[i][j]);
