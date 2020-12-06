@@ -1,8 +1,9 @@
 ﻿#include<iostream>
 #include<ctime>
 #include<chrono>
-#define K 20
-#define N 100
+#include<algorithm>
+#define K 45
+#define N 1000
 using namespace std;
 int A[N],A_copy[N], B[N], C[N];
 double aver_dur, dur_arr[N + 10];
@@ -28,6 +29,8 @@ int main() {
 	for (int j = 0; j < N; ++j) {
 		for (int l = 0; l < K; ++l)
 			A[l] = A_copy[l];
+		sort(A, A + K);
+		reverse(A, A + K);
 		auto start= chrono::high_resolution_clock::now();
 		gnome_sort(A);
 		auto end = chrono::high_resolution_clock::now();
@@ -42,7 +45,7 @@ int main() {
 		cout << "Duration " << i << " = " << dur_arr[i] << "s\n";
 	}
 	sort(dur_arr, dur_arr + N);
-	for (int i = 10; i < N - 10; ++i)
+	for (int i = 100; i < N - 100; ++i)
 		aver_dur += dur_arr[i];
-	cout << "Average duration = " << aver_dur / (N - 1) << "s";
+	cout << "Average duration = " << aver_dur / (N - 201) << "s";
 }
