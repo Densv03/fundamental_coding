@@ -12,7 +12,7 @@ void filling_in(int matrix[k][k], int x, int y) {
 			matrix[i][j] = rand() % 20 - 10;
 	for (int i = 0; i < x; ++i) {
 		for (int j = 0; j < y; ++j)
-			printf("%d ", matrix[i][j]);
+			printf("%3d ", matrix[i][j]);
 		printf("\n");
 	}
 }
