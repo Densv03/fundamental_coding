@@ -11,13 +11,13 @@ int main(void) {
     for (n = 0; ; n++, k1 = -k1) {
         dbln = n;
         term = k1 * (dbln + 1) / (dbln * dbln + 1);
-            if (abs(term) >= eps)
-                sum += term;
-            else {
-                printf("%d\n", n);
-                break;
-            }
-          
+        if (abs(term) >= eps)
+            sum += term;
+        else {
+            printf("%d\n", n);
+            break;
+        }
+
         if (n == 9)
             printf("Sum of 10 succession elements - %10.7lf\n", sum);
     }

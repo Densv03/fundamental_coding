@@ -7,5 +7,4 @@ int main() {
 	srand(time(0));
 	person = rand() % 10 + 1;
 	coumputer = rand() % 10 + 1 + 15;
-	//
 }

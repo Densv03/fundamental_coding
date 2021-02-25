@@ -6,7 +6,7 @@
 #include<utility>
 
 using namespace std;
-int n, k, B[100],pos,t,C[200];
+int n, k, B[100], pos, t, C[200];
 pair <int, bool>A[100];
 char action;
 int main() {
@@ -105,7 +105,7 @@ int main() {
 		for (int i = 0; i < n; ++i) {
 			if (A[i].second == 0) {
 				B[t] = A[i].first;
-					t++;
+				t++;
 			}
 		}
 

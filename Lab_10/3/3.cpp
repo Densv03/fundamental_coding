@@ -17,8 +17,8 @@ void filling_in(int matrix[k][k], int x, int y) {
 	}
 }
 
-int pos_nums(int matrix[k][k], int x, int y,int pos) {
-	int i = pos,ans=0;
+int pos_nums(int matrix[k][k], int x, int y, int pos) {
+	int i = pos, ans = 0;
 	for (int j = 0; j < y; ++j)
 		if (matrix[i][j] > 0)ans++;
 	return ans;

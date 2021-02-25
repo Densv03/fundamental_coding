@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<ctime>
 #include<iostream>
-int n, n1, A[20], sum, num, answer,num1;
+int n, n1, A[20], sum, num, answer, num1;
 int difers(int z) {
 	int k = 1;
 	z--;
@@ -14,7 +14,7 @@ int difers(int z) {
 }
 int main() {
 
-	
+
 	// Getting random number
 	srand(time(0));
 	n = rand() % 1000 + 1;

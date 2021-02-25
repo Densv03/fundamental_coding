@@ -3,9 +3,9 @@
 #include<stdio.h>
 #include<ctime>
 using namespace std;
-float B[15][15],C[100],*ans;
+float B[15][15], C[100], * ans;
 int A[100];
-float *func(int *z, int x, int y) {
+float* func(int* z, int x, int y) {
 	int k = 0, t = 0;
 	// Array to matrix
 
@@ -19,7 +19,7 @@ float *func(int *z, int x, int y) {
 	}
 	// Matrix multiplication
 
-	double avg = 0, sum=0;
+	double avg = 0, sum = 0;
 	for (int i = 0; i < x; ++i) {
 		for (int j = 0; j < y; ++j)
 			sum += B[i][j];
@@ -32,7 +32,7 @@ float *func(int *z, int x, int y) {
 	k = 0;
 	t = 0;
 	for (int i = 1; i <= x * y; ++i) {
-		C[i-1] = B[k][t];
+		C[i - 1] = B[k][t];
 		t++;
 		if (i % y == 0) {
 			t = 0;

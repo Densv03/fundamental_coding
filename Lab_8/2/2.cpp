@@ -8,7 +8,7 @@
 using namespace std;
 
 bool A[10];
-int n = 10, temp = 0,num;
+int n = 10, temp = 0, num;
 
 bool full1(bool z[]) {
 	for (int i = 0; i < 5; ++i)
@@ -40,7 +40,7 @@ int main() {
 			break;
 		printf("Вы курите? ");
 		scanf("%3s", ans);
-		if (ans[0] == '+' || ans[0]=='д' && ans[1]=='а' || ans[0]=='Д' && ans[1]=='а' || ans[0]=='д' && ans[1]=='А' || ans[0]=='Д' && ans[1]=='А') {
+		if (ans[0] == '+' || ans[0] == 'д' && ans[1] == 'а' || ans[0] == 'Д' && ans[1] == 'а' || ans[0] == 'д' && ans[1] == 'А' || ans[0] == 'Д' && ans[1] == 'А') {
 			temp = rand() % 4;
 
 			// If place is empty
@@ -51,14 +51,14 @@ int main() {
 
 			// If place isn't empty
 			else {
-				
+
 				// Checking is one more free place
 				if (full1(A))
 					printf("Свободных мест в этой части нет\n");
 
 				// Finding free place
 				else {
-					for(int i=0;i<5;++i)
+					for (int i = 0; i < 5; ++i)
 						if (!A[i]) {
 							printf("Место номер %d было забронировано\n", i + 1);
 							A[i] = 1;
@@ -80,7 +80,7 @@ int main() {
 			else {
 
 				// Checking is one more free place
-				if(full2(A))
+				if (full2(A))
 					printf("Свободных мест в этой части нет\n");
 
 				// Finding free place

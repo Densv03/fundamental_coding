@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{c5d1d94c-032a-45ca-b198-1f374d7395d7}</ProjectGuid>
+    <ProjectGuid>{0c5589da-2cce-4ba8-9156-a156003a0baf}</ProjectGuid>
     <RootNamespace>My3</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>

@@ -70,7 +70,7 @@ int main() {
 	int k = 0;
 	for (int i = 0; i < m; ++i) {
 		for (int j = 0; j < p; ++j) {
-			while (k!=m) {
+			while (k != m) {
 				C[i][j] += A[i][k] * B[k][j];
 				k++;
 			}
